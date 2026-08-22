@@ -1,184 +1,219 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="100%" height="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
   <defs>
     <!-- Background Gradient -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#0a0f1d" />
-      <stop offset="50%" stop-color="#0f172a" />
-      <stop offset="100%" stop-color="#1e1b4b" />
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="40%" stop-color="#0f172a" />
+      <stop offset="80%" stop-color="#1e1b4b" />
+      <stop offset="100%" stop-color="#090d16" />
     </linearGradient>
 
-    <!-- Glowing Accents -->
-    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <!-- Glowing Text Gradient -->
+    <linearGradient id="glowText" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#38bdf8" />
       <stop offset="50%" stop-color="#818cf8" />
       <stop offset="100%" stop-color="#c084fc" />
     </linearGradient>
 
-    <!-- Card Gradient -->
-    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.85" />
+    <!-- Card Background Gradient -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
       <stop offset="100%" stop-color="#0f172a" stop-opacity="0.95" />
     </linearGradient>
 
-    <!-- Dynamic Pulse Filter -->
+    <!-- Highlight Card Background -->
+    <linearGradient id="cardHighlight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b" stop-opacity="0.95" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.98" />
+    </linearGradient>
+
+    <!-- Glow Filter -->
     <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="8" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
 
     <style>
-      @keyframes floatSlow {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        50% { transform: translateY(-7px) rotate(0.8deg); }
+      @keyframes floatCards {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
       }
       @keyframes pulseGlow {
-        0%, 100% { opacity: 0.25; transform: scale(1); }
-        50% { opacity: 0.65; transform: scale(1.04); }
-      }
-      @keyframes beamMove {
-        0% { stroke-dashoffset: 160; }
-        100% { stroke-dashoffset: 0; }
+        0%, 100% { opacity: 0.2; transform: scale(1); }
+        50% { opacity: 0.6; transform: scale(1.08); }
       }
       @keyframes textShimmer {
-        0%, 100% { fill: url(#glowGrad); filter: drop-shadow(0 0 10px rgba(129, 140, 248, 0.4)); }
-        50% { fill: url(#glowGrad); filter: drop-shadow(0 0 20px rgba(192, 132, 252, 0.75)); }
+        0%, 100% { fill: url(#glowText); filter: drop-shadow(0 0 10px rgba(129, 140, 248, 0.4)); }
+        50% { fill: url(#glowText); filter: drop-shadow(0 0 22px rgba(192, 132, 252, 0.8)); }
       }
-      @keyframes nodePulse {
-        0%, 100% { r: 5; opacity: 0.8; }
-        50% { r: 8; opacity: 1; }
+      @keyframes dashMove {
+        0% { stroke-dashoffset: 60; }
+        100% { stroke-dashoffset: 0; }
       }
-      .floating-card {
-        animation: floatSlow 5.5s ease-in-out infinite;
+      @keyframes pulseDot {
+        0%, 100% { r: 4; opacity: 0.7; }
+        50% { r: 6.5; opacity: 1; }
       }
-      .pulsing-glow {
+      .anim-float {
+        animation: floatCards 6s ease-in-out infinite;
+      }
+      .anim-pulse {
         animation: pulseGlow 4s ease-in-out infinite;
         transform-origin: center;
       }
-      .anim-beam {
-        stroke-dasharray: 10, 10;
-        animation: beamMove 2.8s linear infinite;
+      .anim-shimmer {
+        animation: textShimmer 4.5s ease-in-out infinite;
       }
-      .shimmer-title {
-        animation: textShimmer 4s ease-in-out infinite;
+      .anim-dash {
+        stroke-dasharray: 6, 6;
+        animation: dashMove 2s linear infinite;
       }
-      .pulse-circle {
-        animation: nodePulse 2.2s ease-in-out infinite;
+      .pulse-dot {
+        animation: pulseDot 2s ease-in-out infinite;
       }
-      .title-text {
+      .title-font {
         font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         font-weight: 900;
         letter-spacing: -0.5px;
       }
-      .sub-text {
+      .body-font {
         font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        font-weight: 500;
-      }
-      .badge-text {
-        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-        font-weight: 700;
       }
     </style>
   </defs>
 
-  <!-- Background Canvas -->
-  <rect width="1200" height="360" rx="16" fill="url(#bgGrad)" />
-  
-  <!-- Subtle Grid Lines -->
-  <g stroke="#334155" stroke-width="0.5" opacity="0.22">
-    <line x1="0" y1="60" x2="1200" y2="60" />
-    <line x1="0" y1="120" x2="1200" y2="120" />
-    <line x1="0" y1="180" x2="1200" y2="180" />
-    <line x1="0" y1="240" x2="1200" y2="240" />
-    <line x1="0" y1="300" x2="1200" y2="300" />
-    <line x1="200" y1="0" x2="200" y2="360" />
-    <line x1="400" y1="0" x2="400" y2="360" />
-    <line x1="600" y1="0" x2="600" y2="360" />
-    <line x1="800" y1="0" x2="800" y2="360" />
-    <line x1="1000" y1="0" x2="1000" y2="360" />
+  <!-- Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+
+  <!-- Subtle Matrix Grid -->
+  <g stroke="#334155" stroke-width="0.5" opacity="0.2">
+    <line x1="0" y1="70" x2="1200" y2="70" />
+    <line x1="0" y1="140" x2="1200" y2="140" />
+    <line x1="0" y1="210" x2="1200" y2="210" />
+    <line x1="0" y1="280" x2="1200" y2="280" />
+    <line x1="0" y1="350" x2="1200" y2="350" />
+    <line x1="150" y1="0" x2="150" y2="420" />
+    <line x1="300" y1="0" x2="300" y2="420" />
+    <line x1="450" y1="0" x2="450" y2="420" />
+    <line x1="600" y1="0" x2="600" y2="420" />
+    <line x1="750" y1="0" x2="750" y2="420" />
+    <line x1="900" y1="0" x2="900" y2="420" />
+    <line x1="1050" y1="0" x2="1050" y2="420" />
   </g>
 
-  <!-- Ambient Light Orbs -->
-  <circle cx="180" cy="80" r="140" fill="#38bdf8" filter="url(#glow)" class="pulsing-glow" opacity="0.2" />
-  <circle cx="1020" cy="240" r="150" fill="#c084fc" filter="url(#glow)" class="pulsing-glow" opacity="0.22" />
-  <circle cx="600" cy="180" r="110" fill="#818cf8" filter="url(#glow)" class="pulsing-glow" opacity="0.12" />
+  <!-- Ambient Glowing Orbs -->
+  <circle cx="250" cy="90" r="160" fill="#38bdf8" filter="url(#glow)" class="anim-pulse" opacity="0.15" />
+  <circle cx="950" cy="110" r="180" fill="#c084fc" filter="url(#glow)" class="anim-pulse" opacity="0.18" />
+  <circle cx="600" cy="300" r="140" fill="#818cf8" filter="url(#glow)" class="anim-pulse" opacity="0.12" />
 
-  <!-- Left Side: Title & Description (Bounded width: 0 to 650px) -->
-  <g transform="translate(50, 0)">
-    <!-- Pill Tag -->
-    <g transform="translate(0, 46)">
-      <rect width="250" height="26" rx="13" fill="#1e293b" stroke="#475569" stroke-width="1" />
-      <circle cx="14" cy="13" r="4.5" fill="#38bdf8" class="pulse-circle" />
-      <text x="27" y="17" fill="#94a3b8" class="badge-text" font-size="11" letter-spacing="0.5">FINTECH &amp; ACCOUNTING ECOSYSTEM</text>
+  <!-- ==================== TOP SECTION: HEADER & TITLES (CENTERED) ==================== -->
+  <g transform="translate(600, 0)">
+    <!-- Category Pill -->
+    <g transform="translate(0, 36)">
+      <rect x="-140" y="0" width="280" height="28" rx="14" fill="#1e293b" stroke="#475569" stroke-width="1" />
+      <circle cx="-118" cy="14" r="4.5" fill="#38bdf8" class="pulse-dot" />
+      <text x="5" y="18" fill="#94a3b8" class="body-font" font-size="11.5" font-weight="700" text-anchor="middle" letter-spacing="0.6">FINTECH &amp; ACCOUNTING ECOSYSTEM</text>
     </g>
 
-    <!-- Main Title (Compact & Elegant: 36px font) -->
-    <text x="0" y="118" class="title-text shimmer-title" font-size="36" font-weight="900">Awesome Account</text>
-    <text x="0" y="160" class="title-text" font-size="36" fill="#ffffff" font-weight="900">Reconciliation Platforms ⚡</text>
+    <!-- Main Title -->
+    <text x="0" y="102" class="title-font anim-shimmer" font-size="38" font-weight="900" text-anchor="middle">Awesome Account Reconciliation Platforms</text>
 
     <!-- Subtitle -->
-    <text x="0" y="202" class="sub-text" font-size="14.5" fill="#94a3b8">
-      Curated ecosystem of SaaS &amp; Open-Source tools for Transaction Matching,
+    <text x="0" y="136" class="body-font" font-size="14.5" fill="#cbd5e1" font-weight="500" text-anchor="middle">
+      Curated ecosystem of SaaS &amp; Open-Source tools for Transaction Matching, Financial Close &amp; Ledger Automation
     </text>
-    <text x="0" y="224" class="sub-text" font-size="14.5" fill="#94a3b8">
-      Financial Close, Balance-Sheet Substantiation &amp; Ledger Automation.
-    </text>
-
-    <!-- Feature Pills -->
-    <g transform="translate(0, 262)">
-      <g transform="translate(0, 0)">
-        <rect width="130" height="30" rx="15" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2" opacity="0.9" />
-        <text x="65" y="19" fill="#38bdf8" class="badge-text" font-size="11" text-anchor="middle">🔍 Auto-Matching</text>
-      </g>
-      <g transform="translate(140, 0)">
-        <rect width="150" height="30" rx="15" fill="#0f172a" stroke="#818cf8" stroke-width="1.2" opacity="0.9" />
-        <text x="75" y="19" fill="#818cf8" class="badge-text" font-size="11" text-anchor="middle">⚖️ Balance Sheet Close</text>
-      </g>
-      <g transform="translate(300, 0)">
-        <rect width="145" height="30" rx="15" fill="#0f172a" stroke="#c084fc" stroke-width="1.2" opacity="0.9" />
-        <text x="72.5" y="19" fill="#c084fc" class="badge-text" font-size="11" text-anchor="middle">🚀 Open Infrastructure</text>
-      </g>
-    </g>
   </g>
 
-  <!-- Right Side: Graphic Visual (Completely separated, starting at x=740) -->
-  <g transform="translate(740, 52)" class="floating-card">
-    <!-- Connecting animated beams -->
-    <path d="M 125 78 L 175 125" stroke="#38bdf8" stroke-width="2.5" class="anim-beam" fill="none" opacity="0.85" />
-    <path d="M 125 182 L 175 135" stroke="#818cf8" stroke-width="2.5" class="anim-beam" fill="none" opacity="0.85" />
-    <path d="M 230 130 L 268 130" stroke="#34d399" stroke-width="3" class="anim-beam" fill="none" opacity="0.95" />
+  <!-- ==================== BOTTOM SECTION: 4 MODULAR CARDS (HORIZONTAL ROW) ==================== -->
+  <g transform="translate(0, 0)" class="anim-float">
+    
+    <!-- CARD 1: Data Ingestion -->
+    <g transform="translate(45, 175)">
+      <rect width="255" height="195" rx="14" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1.2" filter="url(#glow)" opacity="0.95" />
+      <circle cx="34" cy="36" r="16" fill="#38bdf8" opacity="0.15" />
+      <text x="34" y="42" font-size="16" text-anchor="middle" fill="#38bdf8">🏦</text>
+      
+      <text x="60" y="42" fill="#f8fafc" class="title-font" font-size="15" font-weight="700">Bank &amp; PSP Feeds</text>
+      <text x="20" y="80" fill="#94a3b8" class="body-font" font-size="12.5">
+        Multi-source data ingestion:
+      </text>
+      <text x="20" y="102" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• Plaid, Teller, Adyen, Stripe</text>
+      <text x="20" y="122" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• Electronic SFTP &amp; CSV</text>
+      <text x="20" y="142" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• ERP Subledger Ingestion</text>
 
-    <!-- Source A: Bank Records -->
-    <g transform="translate(0, 48)">
-      <rect width="130" height="60" rx="10" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="1.5" filter="url(#glow)" opacity="0.95" />
-      <circle cx="20" cy="20" r="7.5" fill="#38bdf8" opacity="0.2" />
-      <text x="20" y="24" font-size="11" text-anchor="middle" fill="#38bdf8">🏦</text>
-      <text x="34" y="23" fill="#f8fafc" class="badge-text" font-size="11.5">Bank Statement</text>
-      <text x="14" y="44" fill="#64748b" class="badge-text" font-size="9.5">$4,520.00 • Txn #981</text>
+      <!-- Status Tag -->
+      <g transform="translate(20, 158)">
+        <rect width="115" height="22" rx="11" fill="#0f172a" stroke="#38bdf8" stroke-width="1" />
+        <circle cx="12" cy="11" r="3.5" fill="#38bdf8" />
+        <text x="22" y="15" fill="#38bdf8" class="body-font" font-size="10.5" font-weight="700">Live Connectors</text>
+      </g>
     </g>
 
-    <!-- Source B: General Ledger -->
-    <g transform="translate(0, 152)">
-      <rect width="130" height="60" rx="10" fill="url(#cardGrad)" stroke="#818cf8" stroke-width="1.5" filter="url(#glow)" opacity="0.95" />
-      <circle cx="20" cy="20" r="7.5" fill="#818cf8" opacity="0.2" />
-      <text x="20" y="24" font-size="11" text-anchor="middle" fill="#818cf8">📑</text>
-      <text x="34" y="23" fill="#f8fafc" class="badge-text" font-size="11.5">General Ledger</text>
-      <text x="14" y="44" fill="#64748b" class="badge-text" font-size="9.5">$4,520.00 • ERP Entry</text>
+    <!-- CARD 2: Matching Engine (Featured Highlight) -->
+    <g transform="translate(330, 175)">
+      <rect width="255" height="195" rx="14" fill="url(#cardHighlight)" stroke="#818cf8" stroke-width="1.8" filter="url(#glow)" opacity="0.98" />
+      <circle cx="34" cy="36" r="16" fill="#818cf8" opacity="0.2" />
+      <text x="34" y="42" font-size="16" text-anchor="middle" fill="#818cf8">⚡</text>
+      
+      <text x="60" y="42" fill="#ffffff" class="title-font" font-size="15" font-weight="700">Matching Engine</text>
+      <text x="20" y="80" fill="#94a3b8" class="body-font" font-size="12.5">
+        High-volume auto-matching:
+      </text>
+      <text x="20" y="102" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• 1:1, 1:N, N:1 &amp; N:M Matching</text>
+      <text x="20" y="122" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• Fuzzy &amp; Tolerance Rules</text>
+      <text x="20" y="142" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• Millions txns / hour</text>
+
+      <!-- Status Tag -->
+      <g transform="translate(20, 158)">
+        <rect width="118" height="22" rx="11" fill="#0f172a" stroke="#818cf8" stroke-width="1" />
+        <circle cx="12" cy="11" r="3.5" fill="#818cf8" />
+        <text x="22" y="15" fill="#818cf8" class="body-font" font-size="10.5" font-weight="700">99.8% Accuracy</text>
+      </g>
     </g>
 
-    <!-- Matching Engine Hub -->
-    <g transform="translate(160, 95)">
-      <rect width="70" height="70" rx="35" fill="#0f172a" stroke="#c084fc" stroke-width="2.5" filter="url(#glow)" />
-      <text x="35" y="42" font-size="22" text-anchor="middle" fill="#ffffff">⚡</text>
-      <circle cx="35" cy="35" r="27" stroke="#c084fc" stroke-width="1" stroke-dasharray="4, 4" fill="none" />
+    <!-- CARD 3: Balance Sheet Close -->
+    <g transform="translate(615, 175)">
+      <rect width="255" height="195" rx="14" fill="url(#cardBg)" stroke="#c084fc" stroke-width="1.2" filter="url(#glow)" opacity="0.95" />
+      <circle cx="34" cy="36" r="16" fill="#c084fc" opacity="0.15" />
+      <text x="34" y="42" font-size="16" text-anchor="middle" fill="#c084fc">⚖️</text>
+      
+      <text x="60" y="42" fill="#f8fafc" class="title-font" font-size="15" font-weight="700">Financial Close</text>
+      <text x="20" y="80" fill="#94a3b8" class="body-font" font-size="12.5">
+        Close governance &amp; audit:
+      </text>
+      <text x="20" y="102" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• Balance Sheet Substantiation</text>
+      <text x="20" y="122" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• Variance &amp; Flux Analysis</text>
+      <text x="20" y="142" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• Review Sign-off Policies</text>
+
+      <!-- Status Tag -->
+      <g transform="translate(20, 158)">
+        <rect width="115" height="22" rx="11" fill="#0f172a" stroke="#c084fc" stroke-width="1" />
+        <circle cx="12" cy="11" r="3.5" fill="#c084fc" />
+        <text x="22" y="15" fill="#c084fc" class="body-font" font-size="10.5" font-weight="700">SOX Compliant</text>
+      </g>
     </g>
 
-    <!-- Reconciled Output -->
-    <g transform="translate(265, 100)">
-      <rect width="140" height="60" rx="10" fill="url(#cardGrad)" stroke="#34d399" stroke-width="1.8" filter="url(#glow)" opacity="0.98" />
-      <circle cx="20" cy="20" r="8" fill="#10b981" opacity="0.3" />
-      <text x="20" y="24" font-size="11" text-anchor="middle" fill="#34d399">✓</text>
-      <text x="36" y="23" fill="#34d399" class="badge-text" font-size="11.5">100% Reconciled</text>
-      <text x="14" y="44" fill="#94a3b8" class="badge-text" font-size="9.5">Auto-Certified &amp; Closed</text>
+    <!-- CARD 4: Exception Queue -->
+    <g transform="translate(900, 175)">
+      <rect width="255" height="195" rx="14" fill="url(#cardBg)" stroke="#34d399" stroke-width="1.2" filter="url(#glow)" opacity="0.95" />
+      <circle cx="34" cy="36" r="16" fill="#34d399" opacity="0.15" />
+      <text x="34" y="42" font-size="16" text-anchor="middle" fill="#34d399">🛡️</text>
+      
+      <text x="60" y="42" fill="#f8fafc" class="title-font" font-size="15" font-weight="700">Exception Mgmt</text>
+      <text x="20" y="80" fill="#94a3b8" class="body-font" font-size="12.5">
+        Resolution &amp; adjustments:
+      </text>
+      <text x="20" y="102" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• AI Anomaly Detection</text>
+      <text x="20" y="122" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• Root-Cause Queue Routing</text>
+      <text x="20" y="142" fill="#cbd5e1" class="body-font" font-size="12" font-weight="500">• Automated Journal Postings</text>
+
+      <!-- Status Tag -->
+      <g transform="translate(20, 158)">
+        <rect width="118" height="22" rx="11" fill="#0f172a" stroke="#34d399" stroke-width="1" />
+        <circle cx="12" cy="11" r="3.5" fill="#34d399" />
+        <text x="22" y="15" fill="#34d399" class="body-font" font-size="10.5" font-weight="700">Zero Unresolved</text>
+      </g>
     </g>
+
   </g>
 </svg>
