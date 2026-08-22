@@ -1,565 +1,374 @@
-# 🚀 Awesome-Account-Reconciliation-Platforms
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Account Reconciliation Platforms" width="100%" />
+</p>
 
-## 🌟 Top Account Reconciliation Platforms Ecosystem
+<h1 align="center">⚡ Awesome Account Reconciliation Platforms</h1>
 
-Curated List of SaaS Products & Open-Source GitHub Projects  
-Focused on **Account Reconciliation, Transaction Matching, Bank Reconciliation, Balance-Sheet Reconciliation, Financial Close, Exception Management & Accounting Automation**
+<p align="center">
+  <strong>Curated ecosystem of SaaS Products & Open-Source Projects for Account Reconciliation, Automated Transaction Matching, Bank Reconciliation, Balance-Sheet Substantiation, Financial Close & Accounting Automation.</strong>
+</p>
 
-**Last updated: August 2026**
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a><a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Account-Reconciliation-Platform/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Account-Reconciliation-Platform?style=flat-square&color=gold" alt="Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Account-Reconciliation-Platform/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Account-Reconciliation-Platform?style=flat-square&color=blue" alt="Forks" /></a>
+  <a href="http://makeapullrequest.com"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square" alt="PRs Welcome" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License: MIT" /></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
-This repository tracks notable **SaaS/Hosted Platforms** and **Open-Source Projects** for Account Reconciliation.
+---
 
-Account reconciliation platforms help finance and accounting teams reconcile balance-sheet accounts, bank accounts, subledgers, payments, intercompany balances and other financial data sources; automate matching; identify exceptions; maintain audit trails; and accelerate the financial close.
+## 📖 Overview & SEO Keywords
 
-**Examples** include BlackLine, Trintech, AutoRek, ReconArt, FloQast, OneStream, Cadency, Fiserv Frontier, Duco and SmartStream.
+Welcome to the definitive index of **Account Reconciliation Platforms** and **Transaction Matching Engines**.
 
-> **Open-source emphasis:** There are considerably fewer mature open-source equivalents to enterprise platforms such as BlackLine, Cadency and SmartStream than there are commercial products. Therefore, the Open-Source section includes both dedicated reconciliation engines and open-source accounting, ledger, bank-reconciliation, record-linkage and transaction-matching projects that can be combined into a self-hosted reconciliation stack.
+This directory tracks solutions across:
+- 🏦 **Bank Reconciliation**: Matching bank statement records, payment gateway settlements (Stripe, Adyen, PayPal), and credit card feeds against general ledgers.
+- ⚖️ **Balance Sheet Reconciliation & Substantiation**: Automated certification, variance tracking, trial balance tie-outs, and SOX-compliant audit trails.
+- 🔄 **High-Volume Transaction Matching**: 1:1, 1:N, N:1, and N:M deterministic, rule-based, and fuzzy matching for millions of records per hour.
+- ⏱️ **Financial Close Automation**: Month-end close orchestration, checklist governance, journal entry posting, and flux analysis.
+- 🏢 **Intercompany Reconciliation**: Entity-to-entity netting, discrepancy resolution, and multi-currency adjustments.
+- 🛡️ **Exception Management & Case Handling**: AI-driven root cause categorization, review queues, and discrepancy resolution workflows.
 
 ---
 
 ## 📋 Table of Contents
 
-- [☁️ SaaS/Hosted Platforms](#️-saashosted-platforms)
+- [☁️ SaaS & Hosted Platforms](#️-saas--hosted-platforms)
 - [💻 Open-Source GitHub Projects](#-open-source-github-projects)
-- [🧩 Open-Source Accounting & Reconciliation Platforms](#-open-source-accounting--reconciliation-platforms)
-- [🔧 Open-Source Matching & Reconciliation Engines](#-open-source-matching--reconciliation-engines)
-- [📊 Open-Source Financial Infrastructure](#-open-source-financial-infrastructure)
-- [🏗️ Building an Open-Source Reconciliation Stack](#️-building-an-open-source-reconciliation-stack)
-- [🔍 Commercial vs Open-Source](#-commercial-vs-open-source)
+  - [🥇 Dedicated Reconciliation & Transaction Matching Engines](#-dedicated-reconciliation--transaction-matching-engines)
+  - [🧩 Open-Source Accounting, ERP & Financial Management Platforms](#-open-source-accounting-erp--financial-management-platforms)
+  - [🔧 Fuzzy Matching, Probabilistic Record Linkage & Comparison Toolkits](#-fuzzy-matching-probabilistic-record-linkage--comparison-toolkits)
+  - [📊 High-Performance Financial Infrastructure & Programmable Ledgers](#-high-performance-financial-infrastructure--programmable-ledgers)
+- [🏗️ Reference Architecture: Building an Open-Source Reconciliation Stack](#️-reference-architecture-building-an-open-source-reconciliation-stack)
+- [🔍 Commercial SaaS vs Open-Source Comparison](#-commercial-saas-vs-open-source-comparison)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [⭐ Star History](#-star-history)
 - [⚠️ Disclaimer](#️-disclaimer)
 
 ---
 
-# ☁️ SaaS/Hosted Platforms
+# ☁️ SaaS & Hosted Platforms
 
-| Platform | Description | Starting Pricing | Free Tier / Free Trial Limits |
-|---|---|---|---|
-| **Numeric** | AI-powered financial close and auto-reconciliation platform for modern accounting teams. | Essentials tier starts at **$30/user/month** (billed annually; Growth/Enterprise tiers for live ERP integrations & auto-rec) | No free tier or self-serve trial; live custom product demo and workflow scoping available upon request |
-| **ReconArt** | Total reconciliation lifecycle platform covering transaction matching, account certification, variance analysis, and close management. | Essentials edition starts at **~$300/month** (billed annually; includes up to 25 million transactions/year) | No free-forever plan or self-serve trial; tailored interactive sandbox demo with sample data provided upon request |
-| **FloQast** | Accounting workflow automation platform for balance sheet reconciliation, transaction matching, and close checklists. | Entry-level plans start at **~$12,000/year** (~$1,000/month billed annually for small finance teams) | No free-forever plan or trial for the core SaaS; FloQademy platform offers free CPE/CPD training courses with unlimited access |
-| **FloQast Reconciliation Management** | Dedicated FloQast module providing automated balance-sheet substantiation and tie-outs directly linked to ERP trial balances. | Included in FloQast packages starting at **~$12,000/year** (or ~$5,000/year as an add-on module) | No free tier or trial period; personalized 1-on-1 walkthrough demo available on request |
-| **BlackLine** | Enterprise financial close platform automating balance-sheet reconciliation, intercompany transactions, and journal entries. | Modular deployments start at **~$13,000 to $40,000/year** (mid-market entry; median contracts $40k–$77k/year) | No free tier or self-serve trial; guided interactive demos and ROI assessment available upon request |
-| **BlackLine Account Reconciliations** | Core BlackLine module standardizing and automating balance-sheet account reconciliations and review workflows. | Subscriptions start at **~$13,000/year** (based on user tier, entity volume, and ERP connections) | No free tier or self-serve trial; sales-assisted evaluation demo available upon request |
-| **BlackLine Transaction Matching** | High-volume reconciliation engine designed to match millions of bank, PSP, POS, and ERP transactions automatically. | Starts at **~$20,000/year** (scaled by transaction ingestion volume and rule complexity) | No free tier or self-serve trial; custom proof-of-concept demo with company data upon request |
-| **Trintech** | Comprehensive financial-close and reconciliation automation platform through the Adra and Cadency product lines. | Adra mid-market close packages start at **~$40,000/year**; enterprise Cadency packages start higher | No free tier or standard trial; scheduled product discovery and guided demo sessions on request |
-| **Trintech Adra (Adra Suite)** | Mid-market financial-close suite providing automated balance sheet reconciliation, transaction matching, and task governance. | Entry deployments start at **~$40,000/year** (typically $40k–$70k/year based on entity count) | No free tier or self-serve trial; customized live product walkthrough provided upon request |
-| **Adra Matcher** | Automated transaction-matching module within Trintech Adra for reconciling bank accounts, credit cards, and ledger records. | Module packages start at **~$15,000/year** (as part of Adra suite deployment) | No free tier or trial; guided interactive demo available upon request |
-| **Adra Balancer** | Digital balance-sheet reconciliation and certification module in the Trintech Adra suite. | Module packages start at **~$15,000/year** (as part of Adra suite deployment) | No free tier or trial; live guided walkthrough and scoping demo on request |
-| **Cadency (by Trintech)** | Enterprise-grade financial close and reconciliation platform for complex, multi-national organizations. | Enterprise contracts start at **~$75,000/year** (scaled by entity count, ERP connections, and modules) | No free tier or self-serve trial; dedicated enterprise proof-of-concept and guided demo on request |
-| **Trintech CadencyDirect** | ServiceNow-native financial close and reconciliation solution embedding Cadency capabilities into enterprise workflows. | Starts at **~$80,000/year** (plus ServiceNow licensing requirements) | No free tier or self-serve trial; ServiceNow partner-assisted live demonstration on request |
-| **AutoRek** | Financial data management, payment reconciliation, and regulatory compliance platform for banks and asset managers. | Deployments start at **~$45,000/year** (scaled by data volume, feeds, and regulatory modules) | No free tier or self-serve trial; consultative proof-of-value demo available on request |
-| **OneStream** | Unified Corporate Performance Management (CPM) platform with financial close, consolidation, and reconciliation modules. | Deployments start at **~$50,000 to $60,000/year** (scaled by user licenses, legal entities, and CPM apps) | No free tier or self-serve trial; custom solution demo and value assessment on request |
-| **OneStream Account Reconciliations** | Native OneStream MarketPlace solution integrating balance-sheet reconciliations directly into the financial consolidation model. | Available within OneStream CPM platform subscriptions (starting at **~$50,000/year**) | No free tier or self-serve trial; custom architecture walkthrough and live demo on request |
-| **Duco** | Cloud-native data automation and reconciliation platform for high-volume matching across complex financial datasets. | AWS Marketplace starter tiers start at **~$52,000/year** (average enterprise contract ~$183,000/year) | No free tier or self-serve trial; AWS Marketplace scoped sandbox pack available for evaluation |
-| **SolveXia** | Low-code financial process automation platform for multi-source data matching, reconciliations, and regulatory reports. | Starter plans start at **~$18,000/year** (~$1,500/month billed annually) | No free tier or self-serve trial; custom guided proof-of-concept demo available upon request |
-| **HighRadius Account Reconciliation** | Autonomous financial close software providing AI-driven transaction matching, balance substantiation, and journal creation. | Starts at **~$25,000/year** (available under annual SaaS subscription or outcome-based model) | No free tier or self-serve trial; outcome-based pricing model available ($0 software cost until go-live) |
-| **Fiserv Frontier Reconciliation** | High-throughput banking, cash, and payment reconciliation system designed for large financial institutions. | Enterprise institutional contracts start at **~$100,000/year** (plus integration and implementation fees) | No free tier or self-serve trial; institutional consultation and technical demo available upon request |
-| **SmartStream TLM Reconciliation** | Transaction Lifecycle Management platform for high-volume cash, trade, securities, and inter-system matching. | Enterprise institutional contracts start at **~$150,000/year** (scaled by transaction volume and modules) | No free tier or self-serve trial; institutional proof-of-concept and customized demo on request |
+> Sorted in **descending order** by **Company Size (Valuation / Revenue / Market Cap)**.
+
+| Platform | Company Size (Valuation / Revenue) | Description | Starting Pricing | Free Tier / Free Trial Limits |
+|---|---|---|---|---|
+| **Fiserv Frontier Reconciliation** | **~$19.5B+ Annual Revenue** / ~$90B+ Market Cap (Fortune 500: FI) | Enterprise-grade institutional reconciliation and certification platform designed for high-volume banking, card networks, and multi-system financial operations. | Institutional enterprise contracts start at **~$100,000/year** (plus implementation & custom integration fees) | No free tier or self-serve trial; institutional discovery session and technical walkthrough available upon request |
+| **OneStream** | **~$500M+ ARR** / ~$6.5B+ Market Cap (Public: OS) | Unified Corporate Performance Management (CPM) software providing financial close, consolidation, reporting, and automated account reconciliation. | Deployments start at **~$50,000 to $60,000/year** (scaled by user licenses, legal entities, and CPM apps) | No free tier or self-serve trial; customized solution demo and value assessment on request |
+| **OneStream Account Reconciliations** | **~$500M+ ARR** / ~$6.5B+ Market Cap (Public: OS) | Native OneStream MarketPlace solution integrating balance-sheet substantiation directly into the core financial consolidation engine. | Available within OneStream CPM subscriptions (starting at **~$50,000/year**) | No free tier or self-serve trial; customized architecture walkthrough and live demo on request |
+| **BlackLine** | **~$600M+ Annual Revenue** / ~$3.5B+ Market Cap (Public: BL) | Market-leading cloud platform automating balance sheet reconciliations, transaction matching, intercompany accounting, and month-end close. | Modular deployments start at **~$13,000 to $40,000/year** (median annual contracts range between $40,000–$77,000/year) | No free tier or self-serve trial; personalized live guided demo and ROI assessment available on request |
+| **BlackLine Account Reconciliations** | **~$600M+ Annual Revenue** / ~$3.5B+ Market Cap (Public: BL) | Standardizes and automates balance-sheet account reconciliations, review certifications, and SOX-compliant audit trails. | Subscriptions start at **~$13,000/year** (priced per user seat, entity count, and ERP connector count) | No free tier or self-serve trial; sales-assisted evaluation demo available upon request |
+| **BlackLine Transaction Matching** | **~$600M+ Annual Revenue** / ~$3.5B+ Market Cap (Public: BL) | High-speed matching engine capable of matching millions of daily bank, PSP, POS, and ERP transactions with configurable tolerances. | Module subscriptions start at **~$20,000/year** (scaled by transaction volume and rule complexity) | No free tier or self-serve trial; custom proof-of-concept demo using customer sample data on request |
+| **HighRadius Account Reconciliation** | **~$3.1B Valuation** / ~$200M+ ARR (Late-stage Unicorn) | AI-powered autonomous finance software that automates balance sheet substantiation, anomaly detection, transaction matching, and journal entry generation. | Subscriptions start at **~$25,000/year** (available via annual SaaS subscription or Outcome-Based Pricing) | No free tier or self-serve trial; Outcome-Based Pricing available ($0 software subscription fees until platform go-live) |
+| **Trintech** | **~$200M+ Annual Revenue** / ~$2B+ PE Valuation (Summit / TA) | Financial close and compliance automation leader delivering automated reconciliation workflows across the Cadency and Adra product lines. | Mid-market Adra packages start at **~$40,000/year**; enterprise Cadency tiers start at ~$75,000/year | No free tier or standard trial; scheduled product discovery and guided demo sessions on request |
+| **Trintech Adra (Adra Suite)** | **~$200M+ Annual Revenue** / ~$2B+ PE Valuation (Summit / TA) | Modern financial-close suite purpose-built for mid-market teams, featuring automated matching, balance sheet certification, and task governance. | Entry deployments start at **~$40,000/year** (typically $40,000–$70,000/year based on entity count) | No free tier or self-serve trial; customized live product walkthrough provided upon request |
+| **Cadency (by Trintech)** | **~$200M+ Annual Revenue** / ~$2B+ PE Valuation (Summit / TA) | Enterprise-grade close automation platform for large multinational enterprises with complex multi-ERP and multi-currency reconciliations. | Enterprise contracts start at **~$75,000/year** (scaled by entity count, ERP connections, and modules) | No free tier or self-serve trial; dedicated enterprise proof-of-concept and guided demo on request |
+| **Trintech CadencyDirect** | **~$200M+ Annual Revenue** / ~$2B+ PE Valuation (Summit / TA) | Built natively on the ServiceNow platform, embedding Cadency financial close and reconciliation capabilities directly into enterprise service workflows. | Starts at **~$80,000/year** (plus required ServiceNow platform licensing) | No free tier or self-serve trial; ServiceNow partner-assisted live demonstration on request |
+| **Adra Matcher** | **~$200M+ Annual Revenue** / ~$2B+ PE Valuation (Summit / TA) | High-speed automated transaction-matching tool within the Adra suite for bank, credit card, subledger, and payment gateway data. | Module packages start at **~$15,000/year** (as part of Adra suite deployment) | No free tier or trial; guided interactive demo available upon request |
+| **Adra Balancer** | **~$200M+ Annual Revenue** / ~$2B+ PE Valuation (Summit / TA) | Balance-sheet reconciliation and review certification module providing automated reconciliation policies and digital sign-offs. | Module packages start at **~$15,000/year** (as part of Adra suite deployment) | No free tier or trial; live guided walkthrough and scoping demo on request |
+| **FloQast** | **~$1.6B Valuation** / ~$120M+ ARR (Series E Unicorn) | Accounting workflow automation platform providing close checklists, trial-balance reconciliation tie-outs, and transaction matching. | Entry-level plans start at **~$12,000/year** (~$1,000/month billed annually for small accounting teams) | No free-forever plan or trial for core SaaS; FloQademy platform offers free CPE/CPD training courses with unlimited access |
+| **FloQast Reconciliation Management** | **~$1.6B Valuation** / ~$120M+ ARR (Series E Unicorn) | Dedicated FloQast module automating balance sheet account substantiation directly tied to live ERP trial balances. | Included in FloQast packages starting at **~$12,000/year** (or ~$5,000/year as an add-on module) | No free tier or trial period; personalized 1-on-1 walkthrough demo available on request |
+| **Duco** | **~$350M+ Valuation** / ~$30M+ ARR (Nordic Capital backed) | Cloud-native data automation and reconciliation platform specializing in high-volume, complex financial datasets, exceptions, and inter-system matching. | AWS Marketplace starter tiers start at **~$52,000/year** (average enterprise deployment is ~$183,000/year) | No free tier or self-serve trial; AWS Marketplace scoped sandbox pack available for evaluation |
+| **Numeric** | **~$300M+ Valuation** / ~$10M+ ARR (Tier-1 VC Backed) | Next-gen AI-powered month-end close platform delivering automated balance sheet reconciliations, variance flux analysis, and ERP integrations. | Essentials tier starts at **$30/user/month** (billed annually; Growth/Enterprise tiers for live ERP sync & auto-rec) | No free tier or self-serve trial; live custom product demo and workflow scoping available upon request |
+| **SmartStream TLM Reconciliation** | **~$100M+ Annual Revenue** (Acquired / Private Equity) | Tier-1 financial institution transaction-lifecycle management solution for high-volume cash, securities, collateral, and derivatives matching. | Enterprise institutional contracts start at **~$150,000/year** (scaled by transaction volume and modules) | No free tier or self-serve trial; institutional proof-of-concept and customized demo on request |
+| **AutoRek** | **~$15M–$20M Annual Revenue** (SEP Backed) | Financial data management, payment reconciliation, and regulatory compliance platform used by global banks, insurance providers, and asset managers. | Deployments start at **~$45,000/year** (scaled by data volume, feeds, and regulatory modules) | No free tier or self-serve trial; consultative proof-of-value demo available on request |
+| **SolveXia** | **~$10M–$15M Annual Revenue** (Bootstrapped / Growth) | Low-code automation platform for financial data transformation, automated reconciliations, variance analysis, and regulatory reporting workflows. | Starter plans start at **~$18,000/year** (~$1,500/month billed annually) | No free tier or self-serve trial; custom guided proof-of-concept demo available upon request |
+| **ReconArt** | **~$5M–$10M Annual Revenue** (Privately Held) | Comprehensive reconciliation management software supporting transaction matching, balance sheet certification, and period-end close. | Essentials edition starts at **~$300/month** (billed annually; includes up to 25 million transactions/year) | No free-forever plan or self-serve trial; tailored interactive sandbox demo with sample data provided upon request |
 
 ---
 
 # 💻 Open-Source GitHub Projects
 
-## 🥇 Dedicated Reconciliation Engines
-
-### [Settler](https://github.com/Settler/settler)
-
-Open-source reconciliation infrastructure designed to match financial records across banks, Stripe, ERPs and ledgers.
-
-Key capabilities include:
-
-- Deterministic reconciliation
-- Configurable matching rules
-- Multi-source joins
-- Field-level tolerances
-- Mismatch detection
-- Evidence generation
-- Reconciliation runs
-- CLI
-- TypeScript SDK
-- Self-hosting
-- Audit-oriented evidence
-
-Settler is one of the most directly relevant modern open-source projects for building a BlackLine/Duco-style reconciliation engine. The project describes its core, CLI, SDK and evidence model as Apache 2.0 licensed. 
+Each open-source project is indexed with its live GitHub star count badge linking directly to its stargazers list and sorted in **descending order of stars**.
 
 ---
 
-### [Lerian Matcher](https://github.com/LerianStudio/matcher)
+## 🥇 Dedicated Reconciliation & Transaction Matching Engines
 
-Open-source transaction-reconciliation engine designed for financial systems.
+Dedicated engines engineered specifically for matching records across banks, payment gateways, ERPs, and ledgers.
 
-Useful capabilities include:
+### [Hyperswitch](https://github.com/juspay/hyperswitch) [![GitHub stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers)
+- 🚀 **Core Focus**: Open-source, high-performance financial payment switch and payment operations platform written in Rust.
+- ⚡ **Reconciliation Highlights**: Includes built-in multi-processor reconciliation pipelines, fee auditing, refund tracking, settlement reconciliation, and unified dispute resolution.
+- 📜 **License**: Apache-2.0
 
-- Transaction matching
-- Configurable matching rules
-- Confidence scoring
-- Multi-source reconciliation
-- Exception handling
-- Financial transaction processing
-- API-oriented architecture
+### [Midday](https://github.com/midday-ai/midday) [![GitHub stars](https://img.shields.io/github/stars/midday-ai/midday?style=social&color=white)](https://github.com/midday-ai/midday/stargazers)
+- 🚀 **Core Focus**: Modern all-in-one financial operating system with automated bank statement reconciliation, invoice matching, and transaction synchronization.
+- ⚡ **Reconciliation Highlights**: Automated receipt-to-transaction matching, multi-bank feed reconciliation via Plaid/Teller/GoCardless, and live financial overview.
+- 📜 **License**: Open Source
 
-A particularly interesting project for developers building a programmable reconciliation service.
+### [beancount-import](https://github.com/jbms/beancount-import) [![GitHub stars](https://img.shields.io/github/stars/jbms/beancount-import?style=social&color=white)](https://github.com/jbms/beancount-import/stargazers)
+- 🚀 **Core Focus**: Semi-automated transaction import and reconciliation framework for Beancount plain-text accounting.
+- ⚡ **Reconciliation Highlights**: Probabilistic payee matching, balance assertion verification, duplicate transaction detection, and interactive reconciliation UI.
+- 📜 **License**: GPL-2.0
 
----
+### [OCA Account Reconcile](https://github.com/OCA/account-reconcile) [![GitHub stars](https://img.shields.io/github/stars/OCA/account-reconcile?style=social&color=white)](https://github.com/OCA/account-reconcile/stargazers)
+- 🚀 **Core Focus**: Official Odoo Community Association (OCA) modules focused entirely on advanced financial reconciliation.
+- ⚡ **Reconciliation Highlights**: Mass reconciliation wizards, automated reconciliation rules, payment matching, and bank statement line reconcilers.
+- 📜 **License**: AGPL-3.0
 
-### [OpenRec](https://github.com/openrec)
+### [Pavit Bank Reconciliation](https://github.com/pavitsu/pavit-bank-reconciliation) [![GitHub stars](https://img.shields.io/github/stars/pavitsu/pavit-bank-reconciliation?style=social&color=white)](https://github.com/pavitsu/pavit-bank-reconciliation/stargazers)
+- 🚀 **Core Focus**: Python-based desktop application for reconciling bank statement CSVs against internal general ledger exports.
+- ⚡ **Reconciliation Highlights**: Automated date and amount tolerance matching, reference number parsing, and discrepancy export.
+- 📜 **License**: MIT
 
-Open-source reconciliation-engine concept focused on high-throughput financial-data matching.
+### [Open Accounting](https://github.com/HMB-research/open-accounting) [![GitHub stars](https://img.shields.io/github/stars/HMB-research/open-accounting?style=social&color=white)](https://github.com/HMB-research/open-accounting/stargazers)
+- 🚀 **Core Focus**: Self-hosted double-entry accounting software featuring integrated bank statement import and reconciliation flows.
+- ⚡ **Reconciliation Highlights**: Statement ingestion, account reconciliation views, balance verification, and audit logs.
+- 📜 **License**: MIT
 
-Useful for:
+### [Multi-Processor Payment Reconciliation](https://github.com/Etherlabs-dev/multi-processor-reconciliation) [![GitHub stars](https://img.shields.io/github/stars/Etherlabs-dev/multi-processor-reconciliation?style=social&color=white)](https://github.com/Etherlabs-dev/multi-processor-reconciliation/stargazers)
+- 🚀 **Core Focus**: Workflow automation pipeline built with n8n and PostgreSQL for reconciling multi-processor payment receipts (Stripe, PayPal, Square, ACH).
+- ⚡ **Reconciliation Highlights**: Fee deduction analysis, chargeback tracking, split payment matching, and QuickBooks sync.
+- 📜 **License**: MIT
 
-- Large CSV datasets
-- Rule-based matching
-- High-volume reconciliation
-- Automated comparison
-- Exception generation
-
----
-
-### [Pavit Bank Reconciliation](https://github.com/pavitsu/pavit-bank-reconciliation)
-
-Open-source Python bank-reconciliation application that matches bank statements against accounting ledgers.
-
-Capabilities include:
-
-- Bank CSV import
-- Ledger CSV import
-- Amount matching
-- Date matching
-- Description/reference matching
-- Balance comparison
-- GUI
-- Automated reconciliation
-
-The project is MIT licensed and explicitly targets matching accounting records against bank-statement information. 
+### [Agent for Accounting](https://github.com/FoundrySoftHQ/agent-for-accounting) [![GitHub stars](https://img.shields.io/github/stars/FoundrySoftHQ/agent-for-accounting?style=social&color=white)](https://github.com/FoundrySoftHQ/agent-for-accounting/stargazers)
+- 🚀 **Core Focus**: Open-source accounting co-pilot featuring deterministic CSV comparison and transaction classification.
+- ⚡ **Reconciliation Highlights**: Clear separation of timing differences, amount mismatches, splits, and unmatched exceptions.
+- 📜 **License**: MIT
 
 ---
 
-### [Reconcile Engine](https://github.com/nanyanen87/reconcile-engine)
+## 🧩 Open-Source Accounting, ERP & Financial Management Platforms
 
-Dependency-free TypeScript reconciliation engine for comparing bank/card ledgers against vouchers.
+Full-scale accounting and ERP platforms that provide robust general ledgers, subledgers, bank feeds, and native reconciliation engines.
 
-Provides concepts such as:
+### [Odoo Community](https://github.com/odoo/odoo) [![GitHub stars](https://img.shields.io/github/stars/odoo/odoo?style=social&color=white)](https://github.com/odoo/odoo/stargazers)
+- 🌟 **Stars**: 53,800+
+- 🚀 **Capabilities**: Enterprise-grade business management suite featuring full double-entry accounting, electronic bank feeds, automated reconciliation models, and period-end close management.
+- 📜 **License**: LGPL-3.0
 
-- Matches
-- Gaps
-- Review items
-- Timing differences
-- Confidence
-- Provenance
-- Deterministic reconciliation
+### [ERPNext](https://github.com/frappe/erpnext) [![GitHub stars](https://img.shields.io/github/stars/frappe/erpnext?style=social&color=white)](https://github.com/frappe/erpnext/stargazers)
+- 🌟 **Stars**: 38,300+
+- 🚀 **Capabilities**: 100% open-source ERP with comprehensive General Ledger, Accounts Receivable, Accounts Payable, Bank Statement Clearance, and Payment Reconciliation tools.
+- 📜 **License**: GPL-3.0
 
-Useful as a lightweight foundation for custom reconciliation applications.
+### [Actual Budget](https://github.com/actualbudget/actual) [![GitHub stars](https://img.shields.io/github/stars/actualbudget/actual?style=social&color=white)](https://github.com/actualbudget/actual/stargazers)
+- 🌟 **Stars**: 28,200+
+- 🚀 **Capabilities**: Local-first personal and small business financial system with automated bank synchronization, custom transaction rule engines, and account balance reconciliation.
+- 📜 **License**: MIT
 
----
+### [Firefly III](https://github.com/firefly-iii/firefly-iii) [![GitHub stars](https://img.shields.io/github/stars/firefly-iii/firefly-iii?style=social&color=white)](https://github.com/firefly-iii/firefly-iii/stargazers)
+- 🌟 **Stars**: 24,300+
+- 🚀 **Capabilities**: Self-hosted financial manager supporting double-entry bookkeeping, rule-based transaction imports, recurring transaction reconciliation, and financial reporting.
+- 📜 **License**: AGPL-3.0
 
-### [Multi-Processor Payment Reconciliation](https://github.com/Etherlabs-dev/multi-processor-reconciliation)
+### [Akaunting](https://github.com/akaunting/akaunting) [![GitHub stars](https://img.shields.io/github/stars/akaunting/akaunting?style=social&color=white)](https://github.com/akaunting/akaunting/stargazers)
+- 🌟 **Stars**: 10,000+
+- 🚀 **Capabilities**: Modular accounting software for small businesses with bank account tracking, transaction categorization, and invoice reconciliation.
+- 📜 **License**: GPL-3.0
 
-Open-source n8n + PostgreSQL reconciliation workflow for Stripe, PayPal, Square and ACH/bank deposits.
+### [Ghostfolio](https://github.com/ghostfolio/ghostfolio) [![GitHub stars](https://img.shields.io/github/stars/ghostfolio/ghostfolio?style=social&color=white)](https://github.com/ghostfolio/ghostfolio/stargazers)
+- 🌟 **Stars**: 9,100+
+- 🚀 **Capabilities**: Open-source wealth management and asset tracking platform with automated cash balance tracking, dividend reconciliation, and multi-broker transaction imports.
+- 📜 **License**: AGPL-3.0
 
-Includes:
+### [Ledger](https://github.com/ledger/ledger) [![GitHub stars](https://img.shields.io/github/stars/ledger/ledger?style=social&color=white)](https://github.com/ledger/ledger/stargazers)
+- 🌟 **Stars**: 6,000+
+- 🚀 **Capabilities**: High-performance, command-line double-entry accounting engine based on plain-text financial files, featuring strict balance assertions and automated transaction reconciliation commands.
+- 📜 **License**: BSD-3-Clause
 
-- Transaction normalization
-- Unified ledger
-- Intelligent matching
-- Fee reconciliation
-- Refund handling
-- Split-payment matching
-- Currency conversion
-- Discrepancy detection
-- Exception queues
-- Optional QuickBooks synchronization
+### [Beancount](https://github.com/beancount/beancount) [![GitHub stars](https://img.shields.io/github/stars/beancount/beancount?style=social&color=white)](https://github.com/beancount/beancount/stargazers)
+- 🌟 **Stars**: 5,900+
+- 🚀 **Capabilities**: Programmable plain-text double-entry bookkeeping system with strict balance validation assertions, custom Python plugins, and declarative syntax.
+- 📜 **License**: GPL-2.0
 
-Particularly useful as a reference implementation for payment-reconciliation pipelines.
+### [Frappe Books](https://github.com/frappe/books) [![GitHub stars](https://img.shields.io/github/stars/frappe/books?style=social&color=white)](https://github.com/frappe/books/stargazers)
+- 🌟 **Stars**: 4,800+
+- 🚀 **Capabilities**: Desktop-first accounting application built by the Frappe team for small enterprises, featuring double-entry ledgers, invoicing, and payment reconciliation.
+- 📜 **License**: AGPL-3.0
 
----
+### [hledger](https://github.com/simonmichael/hledger) [![GitHub stars](https://img.shields.io/github/stars/simonmichael/hledger?style=social&color=white)](https://github.com/simonmichael/hledger/stargazers)
+- 🌟 **Stars**: 4,600+
+- 🚀 **Capabilities**: Fast, cross-platform plain-text accounting tool with dedicated balance assertion checking, CSV rule-based translation, and reconciliation commands.
+- 📜 **License**: GPL-3.0
 
-### [Agent for Accounting](https://github.com/FoundrySoftHQ/agent-for-accounting)
+### [GnuCash](https://github.com/Gnucash/gnucash) [![GitHub stars](https://img.shields.io/github/stars/Gnucash/gnucash?style=social&color=white)](https://github.com/Gnucash/gnucash/stargazers)
+- 🌟 **Stars**: 4,300+
+- 🚀 **Capabilities**: Established double-entry accounting software featuring an interactive checkbook-style reconciliation window, OFX/QIF bank imports, and scheduled transactions.
+- 📜 **License**: GPL-2.0
 
-Open-source accounting copilot with a dedicated reconciliation workflow.
+### [Fava](https://github.com/beancount/fava) [![GitHub stars](https://img.shields.io/github/stars/beancount/fava?style=social&color=white)](https://github.com/beancount/fava/stargazers)
+- 🌟 **Stars**: 2,500+
+- 🚀 **Capabilities**: Rich web interface for Beancount offering visual balance sheet substantiation, real-time trial balances, and transaction review tools.
+- 📜 **License**: MIT
 
-The reconciliation engine compares bank and ledger CSV files and classifies:
-
-- Matched records
-- Timing differences
-- Amount differences
-- Potential splits
-- Unmatched bank records
-- Unmatched ledger records
-
-It emphasizes deterministic matching and explicit human-review categories rather than silently force-matching uncertain transactions. 
-
----
-
-# 🧩 Open-Source Accounting & Reconciliation Platforms
-
-### [ERPNext](https://github.com/frappe/erpnext)
-
-Open-source ERP platform with extensive accounting functionality.
-
-Relevant capabilities include:
-
-- General ledger
-- Accounts receivable
-- Accounts payable
-- Bank transactions
-- Bank reconciliation
-- Payment reconciliation
-- Multi-currency accounting
-- Financial statements
-- Journal entries
-- Audit trails
-
-One of the strongest open-source foundations for building a broader accounting and reconciliation platform.
+### [LedgerSMB](https://github.com/ledgersmb/LedgerSMB) [![GitHub stars](https://img.shields.io/github/stars/ledgersmb/LedgerSMB?style=social&color=white)](https://github.com/ledgersmb/LedgerSMB/stargazers)
+- 🌟 **Stars**: 550+
+- 🚀 **Capabilities**: Full-featured open-source ERP and accounting system with SQL ledger database architecture, bank reconciliation wizards, and AR/AP matching.
+- 📜 **License**: GPL-2.0
 
 ---
 
-### [Odoo Community](https://github.com/odoo/odoo)
+## 🔧 Fuzzy Matching, Probabilistic Record Linkage & Comparison Toolkits
 
-Open-source ERP platform with extensive accounting functionality.
+Specialized data-matching libraries used to build custom transaction matching algorithms when identifiers, descriptions, and invoice numbers contain noise or variations.
 
-When combined with OCA accounting modules, it can provide:
+### [Dedupe](https://github.com/dedupeio/dedupe) [![GitHub stars](https://img.shields.io/github/stars/dedupeio/dedupe?style=social&color=white)](https://github.com/dedupeio/dedupe/stargazers)
+- 🌟 **Stars**: 4,500+
+- 🚀 **Capabilities**: Python library that uses machine learning to perform deduplication and entity resolution on messy customer names, merchant strings, and invoice descriptions.
+- 📜 **License**: MIT
 
-- Bank reconciliation
-- Account reconciliation
-- Payment matching
-- Statement processing
-- Journal management
-- Financial reporting
-- Automated matching
+### [RapidFuzz](https://github.com/rapidfuzz/RapidFuzz) [![GitHub stars](https://img.shields.io/github/stars/rapidfuzz/RapidFuzz?style=social&color=white)](https://github.com/rapidfuzz/RapidFuzz/stargazers)
+- 🌟 **Stars**: 4,000+
+- 🚀 **Capabilities**: Ultra-fast C++ and Python string matching library with normalized Levenshtein, Jaro-Winkler, and token sorting algorithms for transaction memo matching.
+- 📜 **License**: MIT
 
----
+### [Splink](https://github.com/moj-analytical-services/splink) [![GitHub stars](https://img.shields.io/github/stars/moj-analytical-services/splink?style=social&color=white)](https://github.com/moj-analytical-services/splink/stargazers)
+- 🌟 **Stars**: 2,300+
+- 🚀 **Capabilities**: Fast, scalable probabilistic record linkage engine (Fellegi-Sunter methodology) powered by DuckDB, Spark, and SQLite to link millions of financial records.
+- 📜 **License**: MIT
 
-### [OCA Account Reconcile](https://github.com/OCA/account-reconcile)
-
-Open-source Odoo Community Association modules specifically focused on reconciliation.
-
-Includes functionality around:
-
-- Bank reconciliation
-- Mass reconciliation
-- Reconciliation models
-- Reconciliation wizards
-- Matching rules
-- Payment reconciliation
-
-This is one of the most relevant open-source module collections for extending Odoo into a reconciliation platform.
+### [Record Linkage Toolkit](https://github.com/J535D165/recordlinkage) [![GitHub stars](https://img.shields.io/github/stars/J535D165/recordlinkage?style=social&color=white)](https://github.com/J535D165/recordlinkage/stargazers)
+- 🌟 **Stars**: 1,000+
+- 🚀 **Capabilities**: Python framework for linking records and entity resolution, providing indexing, string comparison, feature vectors, and machine learning classifiers.
+- 📜 **License**: BSD-3-Clause
 
 ---
 
-### [Open Accounting](https://github.com/HMB-research/open-accounting)
+## 📊 High-Performance Financial Infrastructure & Programmable Ledgers
 
-Open-source, self-hosted accounting platform with double-entry bookkeeping, bank importing and reconciliation workflows.
+Distributed, immutable ledgers and payment backends that provide the audit-proof foundation underneath reconciliation systems.
 
-The project currently describes itself as being under active development and not yet production-ready, so it is best treated as an emerging foundation rather than a mature enterprise replacement. 
+### [TigerBeetle](https://github.com/tigerbeetle/tigerbeetle) [![GitHub stars](https://img.shields.io/github/stars/tigerbeetle/tigerbeetle?style=social&color=white)](https://github.com/tigerbeetle/tigerbeetle/stargazers)
+- 🌟 **Stars**: 16,800+
+- 🚀 **Capabilities**: Distributed financial accounting database designed to process hundreds of thousands of financial transfers per second with strict double-entry balance validation and zero data loss.
+- 📜 **License**: Apache-2.0
 
----
+### [Formance Ledger](https://github.com/formancehq/ledger) [![GitHub stars](https://img.shields.io/github/stars/formancehq/ledger?style=social&color=white)](https://github.com/formancehq/ledger/stargazers)
+- 🌟 **Stars**: 1,300+
+- 🚀 **Capabilities**: Programmable double-entry ledger database optimized for financial operations, money flows, and automated multi-currency accounting rules.
+- 📜 **License**: Apache-2.0
 
-### [LedgerSMB](https://github.com/ledgersmb/LedgerSMB)
+### [jPOS](https://github.com/jpos/jPOS) [![GitHub stars](https://img.shields.io/github/stars/jpos/jPOS?style=social&color=white)](https://github.com/jpos/jPOS/stargazers)
+- 🌟 **Stars**: 700+
+- 🚀 **Capabilities**: Java platform for financial transactions implementing ISO-8583 standards, switch engines, transaction routing, and settlement processing.
+- 📜 **License**: AGPL-3.0
 
-Open-source accounting and ERP system supporting:
+### [Formance Stack](https://github.com/formancehq/stack) [![GitHub stars](https://img.shields.io/github/stars/formancehq/stack?style=social&color=white)](https://github.com/formancehq/stack/stargazers)
+- 🌟 **Stars**: 500+
+- 🚀 **Capabilities**: Open-source financial infrastructure framework connecting payment processors (Stripe, Wise, Modulr) to programmable accounting ledgers with built-in reconciliation flows.
+- 📜 **License**: Apache-2.0
 
-- Double-entry accounting
-- General ledger
-- Accounts payable
-- Accounts receivable
-- Multi-currency accounting
-- Financial reporting
-- Banking workflows
-
-Useful as a foundation for custom reconciliation systems.
-
----
-
-### [GnuCash](https://github.com/Gnucash/gnucash)
-
-Mature open-source accounting application supporting:
-
-- Double-entry bookkeeping
-- Account management
-- Bank transaction import
-- Reconciliation
-- Financial reporting
-
-Better suited to small-business and personal-finance scenarios than enterprise financial-close automation.
+### [Medici](https://github.com/flash-oss/medici) [![GitHub stars](https://img.shields.io/github/stars/flash-oss/medici?style=social&color=white)](https://github.com/flash-oss/medici/stargazers)
+- 🌟 **Stars**: 350+
+- 🚀 **Capabilities**: Double-entry bookkeeping library for Node.js using MongoDB, supporting transactions, balance tracking, and ledger reconciliation.
+- 📜 **License**: MIT
 
 ---
 
-### [Frappe Books](https://github.com/frappe/books)
+# 🏗️ Reference Architecture: Building an Open-Source Reconciliation Stack
 
-Open-source accounting application built around the Frappe ecosystem.
-
-Provides:
-
-- Double-entry bookkeeping
-- Invoicing
-- Payments
-- Expenses
-- Financial reports
-- Accounting workflows
-
-Can be extended with custom reconciliation functionality.
-
----
-
-### [Akaunting](https://github.com/akaunting/akaunting)
-
-Open-source accounting platform for small businesses.
-
-Relevant capabilities include:
-
-- Banking
-- Transactions
-- Invoicing
-- Expenses
-- Accounting
-- Financial reporting
-
----
-
-### [Firefly III](https://github.com/firefly-iii/firefly-iii)
-
-Open-source personal-finance manager with:
-
-- Transaction management
-- Account management
-- Rule-based imports
-- Financial categorization
-- Reporting
-- Reconciliation-oriented workflows
-
-More appropriate for personal/small-scale financial management than enterprise financial close.
-
----
-
-### [Beancount](https://github.com/beancount/beancount)
-
-Programmable plain-text double-entry accounting system.
-
-Particularly useful for developer-oriented financial reconciliation because financial records are represented as structured text and can be processed programmatically.
-
----
-
-### [Fava](https://github.com/beancount/fava)
-
-Web interface for Beancount providing financial reporting and transaction-management capabilities.
-
-Useful when combined with Beancount import and reconciliation tooling.
-
----
-
-# 🔧 Open-Source Matching & Reconciliation Engines
-
-### [beancount-import](https://github.com/jbms/beancount-import)
-
-Semi-automated transaction-import and reconciliation framework for Beancount.
-
-Useful for:
-
-- Importing bank data
-- Transaction matching
-- Duplicate detection
-- Transaction merging
-- Classification
-- Reconciliation
-
----
-
-### [Splink](https://github.com/moj-analytical-services/splink)
-
-Open-source probabilistic record-linkage framework.
-
-Although not specifically an accounting product, it can be used to match:
-
-- Bank transactions
-- Payments
-- Invoices
-- Customer records
-- Merchant names
-- Financial records
-
-Particularly valuable when exact identifiers are unavailable.
-
----
-
-### [Dedupe](https://github.com/dedupeio/dedupe)
-
-Open-source Python library for fuzzy matching and entity resolution.
-
-Useful for reconciliation scenarios involving:
-
-- Merchant-name variations
-- Customer-name differences
-- Invoice references
-- Payment descriptions
-- Cross-system record matching
-
----
-
-### [RapidFuzz](https://github.com/rapidfuzz/RapidFuzz)
-
-High-performance fuzzy-string-matching library.
-
-Useful as a low-level matching component for:
-
-- Merchant matching
-- Invoice matching
-- Reference matching
-- Description normalization
-- Bank-to-ledger reconciliation
-
----
-
-### [Record Linkage Toolkit](https://github.com/J535D165/recordlinkage)
-
-Python framework for record linkage and entity matching.
-
-Supports:
-
-- Fuzzy matching
-- Deduplication
-- Probabilistic matching
-- Feature generation
-- Record comparison
-
-Can be integrated into custom reconciliation pipelines.
-
----
-
-### [Pixelmatch](https://github.com/mapbox/pixelmatch)
-
-While primarily an image-comparison library, the project demonstrates the type of deterministic comparison primitive that can also be conceptually applied to structured-data comparison systems.
-
----
-
-# 📊 Open-Source Financial Infrastructure
-
-### [TigerBeetle](https://github.com/tigerbeetle/tigerbeetle)
-
-Open-source financial-accounting database designed for high-performance financial transactions.
-
-Useful as a ledger infrastructure component underneath reconciliation systems.
-
----
-
-### [Medici](https://github.com/flash-oss/medici)
-
-Node.js double-entry accounting library.
-
-Can provide an accounting-ledger layer for custom reconciliation applications.
-
----
-
-### [hledger](https://github.com/simonmichael/hledger)
-
-Open-source command-line accounting system based on plain-text double-entry bookkeeping.
-
-Useful for:
-
-- Transaction processing
-- Accounting
-- Financial imports
-- Reconciliation
-- Automated reporting
-
----
-
-### [Ledger](https://github.com/ledger/ledger)
-
-Open-source double-entry accounting system using plain-text financial records.
-
-Useful as a programmable accounting ledger underneath custom reconciliation pipelines.
-
----
-
-### [jPOS](https://github.com/jpos/jPOS)
-
-Open-source Java payment-processing framework supporting ISO-8583 and financial transaction infrastructure.
-
-Not an account-reconciliation product itself, but potentially useful for payment-processing and transaction-processing infrastructure around a reconciliation system.
-
----
-
-# 🏗️ Building an Open-Source Reconciliation Stack
-
-A serious open-source alternative to a commercial account-reconciliation platform will generally require several components rather than a single application.
+A production-grade reconciliation architecture requires data ingestion, normalization, matching, case handling, and financial close certification:
 
 ```text
-                    ┌────────────────────────┐
-                    │      DATA SOURCES      │
-                    │                        │
-                    │ ERP / GL / Bank        │
-                    │ PSP / Cards / ACH      │
-                    │ Subledgers / CSV / API │
-                    └────────────┬───────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │    DATA INGESTION      │
-                    │                        │
-                    │ APIs / SFTP / CSV      │
-                    │ ETL / CDC / Webhooks   │
-                    └────────────┬───────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │    NORMALIZATION       │
-                    │                        │
-                    │ Currency               │
-                    │ Dates                  │
-                    │ References             │
-                    │ Merchant Names         │
-                    │ Transaction Types      │
-                    └────────────┬───────────┘
-                                 │
-                                 ▼
-              ┌─────────────────────────────────────┐
-              │          MATCHING ENGINE            │
-              │                                     │
-              │ Exact Match                         │
-              │ Rule-Based Match                    │
-              │ Tolerance Match                     │
-              │ Fuzzy Match                         │
-              │ One-to-Many                         │
-              │ Many-to-One                         │
-              │ Many-to-Many                        │
-              │ Probabilistic Match                 │
-              └──────────────────┬──────────────────┘
-                                 │
-                    ┌────────────┴─────────────┐
-                    │                          │
-                    ▼                          ▼
-          ┌──────────────────┐       ┌──────────────────┐
-          │     MATCHED      │       │    EXCEPTIONS    │
-          │                  │       │                  │
-          │ Auto-cleared     │       │ Unmatched        │
-          │ Auto-certified   │       │ Amount mismatch  │
-          │ High confidence  │       │ Timing difference│
-          └────────┬─────────┘       │ Duplicate        │
-                   │                 │ Review required  │
-                   │                 └────────┬─────────┘
-                   │                          │
-                   └────────────┬─────────────┘
-                                │
-                                ▼
-                    ┌────────────────────────┐
-                    │  RECONCILIATION CASE   │
-                    │                        │
-                    │ Evidence               │
-                    │ Comments               │
-                    │ Approvals              │
-                    │ Audit Trail            │
-                    │ Status                 │
-                    └────────────┬───────────┘
-                                 │
-                                 ▼
-                    ┌────────────────────────┐
-                    │    FINANCIAL CLOSE     │
-                    │                        │
-                    │ Certification          │
-                    │ Reporting              │
-                    │ Controls               │
-                    │ Management Review      │
-                    └────────────────────────┘
+                    ┌─────────────────────────────────────────┐
+                    │               DATA SOURCES              │
+                    │                                         │
+                    │  🏦 Bank Feeds (Plaid / Teller / SFTP)  │
+                    │  💳 Payment Gateways (Stripe / PayPal)  │
+                    │  📊 ERPs / GLs (NetSuite / SAP / Odoo)  │
+                    │  📁 Subledgers / Billing / CSV Imports  │
+                    └────────────────────┬────────────────────┘
+                                         │
+                                         ▼
+                    ┌─────────────────────────────────────────┐
+                    │          DATA INGESTION & PIPELINE      │
+                    │                                         │
+                    │  • Webhooks & Real-Time Events          │
+                    │  • Automated SFTP Batch Polling         │
+                    │  • CDC (Change Data Capture)            │
+                    │  • Extraction & Schema Mapping          │
+                    └────────────────────┬────────────────────┘
+                                         │
+                                         ▼
+                    ┌─────────────────────────────────────────┐
+                    │       NORMALIZATION & ENRICHMENT        │
+                    │                                         │
+                    │  • Currency Conversion & FX Rates       │
+                    │  • Date Formatting & Timezone Alignment │
+                    │  • Merchant Cleaning (RapidFuzz/Dedupe) │
+                    │  • Reference Number Parsing             │
+                    └────────────────────┬────────────────────┘
+                                         │
+                                         ▼
+               ┌─────────────────────────────────────────────────────┐
+               │          RECONCILIATION MATCHING ENGINE             │
+               │                                                     │
+               │  [Phase 1] 1:1 Deterministic Exact Match            │
+               │  [Phase 2] 1:N / N:1 Split & Group Match            │
+               │  [Phase 3] Rule-Based & Date/Amount Tolerance Match │
+               │  [Phase 4] Probabilistic & Fuzzy Record Linkage     │
+               └──────────────────────────┬──────────────────────────┘
+                                          │
+                            ┌─────────────┴─────────────┐
+                            │                           │
+                            ▼                           ▼
+                  ┌──────────────────┐        ┌──────────────────┐
+                  │     MATCHED      │        │    EXCEPTIONS    │
+                  │                  │        │                  │
+                  │  • Auto-Cleared  │        │  • Unmatched Txn │
+                  │  • Audit Trail   │        │  • Amount Diff   │
+                  │  • Auto-Certified│        │  • Timing Lag    │
+                  │  • High Conf.    │        │  • Duplicate     │
+                  └─────────┬────────┘        └─────────┬────────┘
+                            │                           │
+                            │                           ▼
+                            │                 ┌──────────────────┐
+                            │                 │ EXCEPTION QUEUE  │
+                            │                 │                  │
+                            │                 │  • AI Copilot    │
+                            │                 │  • Human Review  │
+                            │                 │  • Adjustments   │
+                            │                 │  • Write-Offs    │
+                            │                 └─────────┬────────┘
+                            │                           │
+                            └─────────────┬─────────────┘
+                                          │
+                                          ▼
+                    ┌─────────────────────────────────────────┐
+                    │        FINANCIAL CLOSE & REPORTING      │
+                    │                                         │
+                    │  • Balance Sheet Account Substantiation │
+                    │  • SOX & Regulatory Audit Evidence      │
+                    │  • Discrepancy & Variance Flux Reports  │
+                    │  • Period-End Journal Postings & Lock   │
+                    └─────────────────────────────────────────┘
 ```
+
+---
+
+# 🔍 Commercial SaaS vs Open-Source Comparison
+
+| Dimension | Commercial SaaS (BlackLine, FloQast, Numeric, Trintech) | Open-Source Stack (Odoo, TigerBeetle, Splink, Midday) |
+|---|---|---|
+| **Speed to Deployment** | ⚡ Weeks to months (out-of-the-box UI, certified ERP connectors) | 🛠️ Requires engineering setup, ingestion pipelines, and custom rule design |
+| **Annual Cost** | 💰 $12,000 to $150,000+ / year recurring licenses | 💵 $0 software license; costs tied only to infrastructure and hosting |
+| **Data Privacy & Control** | ☁️ Multi-tenant or single-tenant vendor cloud | 🔒 Complete data sovereignty; self-hostable in on-prem or VPC environments |
+| **Custom Rule Flexibility**| ⚙️ Bounded by vendor UI rules and script engines | 💻 Infinite extensibility using Python, Rust, SQL, DuckDB, or machine learning |
+| **Compliance & Audit** | 📋 Pre-packaged SOX, SOC 1/2 compliance reports | 🛡️ Must implement custom immutable audit trails and certification sign-offs |
+
+---
+
+## 🤝 How to Contribute
+
+Contributions are welcome! To contribute:
+
+1. 🍴 Fork this repository.
+2. 🌿 Create your feature branch (`git checkout -b feature/awesome-platform`).
+3. 📝 Add your tool with **specific starting pricing, free tier/trial details, company size, and GitHub star badge** (linked to stargazers).
+4. 📬 Submit a Pull Request.
+
+---
+
+## ⭐ Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Account-Reconciliation-Platform&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Account-Reconciliation-Platform&type=date&legend=top-left)
+
+---
+
+## ⚠️ Disclaimer
+
+*All product names, logos, brands, trademarks, and registered trademarks are property of their respective owners. Company valuations, revenues, and pricing estimates are compiled from publicly available disclosures, investor data, and market research.*
