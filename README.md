@@ -200,6 +200,11 @@ Full-scale accounting and ERP platforms that provide robust general ledgers, sub
 - 🚀 **Capabilities**: Full-featured open-source ERP and accounting system with SQL ledger database architecture, bank reconciliation wizards, and AR/AP matching.
 - 📜 **License**: GPL-2.0
 
+### [OpenBooks](https://github.com/braedonsaunders/openbooks) [![GitHub stars](https://img.shields.io/github/stars/braedonsaunders/openbooks?style=social&color=white)](https://github.com/braedonsaunders/openbooks/stargazers)
+- 🌟 **Stars**: 5+
+- 🚀 **Capabilities**: Mid-market open-source accounting/ERP with a PostgreSQL-enforced double-entry ledger, multi-entity support, job costing, invoices, bills, inventory, approvals, and audit trail.
+- 📜 **License**: AGPL-3.0
+
 ---
 
 ## 🔧 Fuzzy Matching, Probabilistic Record Linkage & Comparison Toolkits
